@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro Realizado com Sucesso!</h1>
+        <div class="message-box" id="dadosFuncionario"></div>       
+        <button onclick="window.location.href='dashboard_rh.html'">Retornar ao Menu Inicial</button>
+        <button onclick="window.print()">Imprimir Detalhes</button>
+    </div>
+
+    <script>
+        // Recuperar os dados do localStorage
+        const nome = localStorage.getItem('nomeFuncionario');
+        const cpf = localStorage.getItem('cpfFuncionario');
+        const cargo = localStorage.getItem('cargoFuncionario');
+        const departamento = localStorage.getItem('departamentoFuncionario');
+
+        // Exibir os dados na página
+        document.getElementById('dadosFuncionario').innerHTML = `
+            <p><strong>Funcionário cadastrado com sucesso.</strong></p>
+            <p>Nome: ${nome}</p>
+            <p>CPF: ${cpf}</p>
+            <p>Cargo: ${cargo}</p>
+            <p>Departamento: ${departamento}</p>
+        `;
+    </script>
+</body>
+</html>

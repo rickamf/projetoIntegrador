@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Cadastro de Fornecedor</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fornecedor Cadastrado com Sucesso!</h1>
+        <div class="details-box">
+            <p><strong>Nome da Empresa:</strong> <span id="nomeEmpresa"></span></p>
+            <p><strong>CNPJ:</strong> <span id="cnpjFornecedor"></span></p>
+            <p><strong>Telefone:</strong> <span id="telefoneFornecedor"></span></p>
+            <p><strong>E-mail:</strong> <span id="emailFornecedor"></span></p>
+            <p><strong>Endereço:</strong> <span id="enderecoFornecedor"></span></p>
+        </div>
+        <button onclick="window.location.href='dashboard_rh.html'">Voltar ao Menu Inicial</button>
+        <button onclick="window.print()">Imprimir Detalhes</button>
+    </div>
+
+    <script>
+        // Recuperar os dados salvos no localStorage
+        document.getElementById('nomeEmpresa').textContent = localStorage.getItem('nomeEmpresa');
+        document.getElementById('cnpjFornecedor').textContent = localStorage.getItem('cnpjFornecedor');
+        document.getElementById('telefoneFornecedor').textContent = localStorage.getItem('telefoneFornecedor');
+        document.getElementById('emailFornecedor').textContent = localStorage.getItem('emailFornecedor');
+        document.getElementById('enderecoFornecedor').textContent = localStorage.getItem('enderecoFornecedor');
+    </script>
+</body>
+</html>

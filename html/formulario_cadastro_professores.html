@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Professores</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Professores</h1>
+        <form id="formCadastro">
+            <div class="form-group">
+                <label for="nome">Nome do Professor:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo">Tipo de Contratação:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="fisica">Pessoa Física</option>
+                    <option value="juridica">Pessoa Jurídica</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="documento">CPF ou CNPJ:</label>
+                <input type="text" id="documento" name="documento" required>
+            </div>
+            <div class="form-group">
+                <label for="area">Área de Atuação:</label>
+                <input type="text" id="area" name="area" required>
+            </div>
+            <div class="form-group">
+                <label for="departamento">Departamento:</label>
+                <input type="text" id="departamento" name="departamento" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('formCadastro').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const tipo = document.getElementById('tipo').value;
+            if (!['fisica', 'juridica'].includes(tipo)) {
+                alert('Selecione um tipo válido.');
+                return;
+            }
+            window.location.href = "confirmacao_cadastro.html";
+        });
+    </script>
+</body>
+</html>

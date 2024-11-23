@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionários</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Funcionários</h1>
+        <form id="cadastroFuncionario">
+            <div class="form-group">
+                <label for="nome">Nome do Funcionário:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+            </div>
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <input type="text" id="cargo" name="cargo" required>
+            </div>
+            <div class="form-group">
+                <label for="departamento">Departamento:</label>
+                <input type="text" id="departamento" name="departamento" required>
+            </div>
+            <button type="submit" class="btn-primary">Cadastrar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('cadastroFuncionario').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const cpf = document.getElementById('cpf').value;
+            const cargo = document.getElementById('cargo').value;
+            const departamento = document.getElementById('departamento').value;
+
+            localStorage.setItem('nomeFuncionario', nome);
+            localStorage.setItem('cpfFuncionario', cpf);
+            localStorage.setItem('cargoFuncionario', cargo);
+            localStorage.setItem('departamentoFuncionario', departamento);
+
+            window.location.href = "confirmacao_funcionario.html";
+        });
+    </script>
+</body>
+</html>

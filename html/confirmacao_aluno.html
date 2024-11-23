@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Cadastro de Aluno</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro Confirmado com Sucesso!</h1>
+        <div class="details-box">
+            <p><strong>Nome:</strong> <span id="nomeAluno"></span></p>
+            <p><strong>CPF:</strong> <span id="cpfAluno"></span></p>
+            <p><strong>E-mail:</strong> <span id="emailAluno"></span></p>
+            <p><strong>Curso:</strong> <span id="cursoAluno"></span></p>
+        </div>
+        <button onclick="window.location.href='dashboard_rh.html'">Voltar ao Menu Inicial</button>
+        <button onclick="window.print()">Imprimir Detalhes</button>
+    </div>
+
+    <script>
+        const nomeAluno = localStorage.getItem('nomeAluno');
+        const cpfAluno = localStorage.getItem('cpfAluno');
+        const emailAluno = localStorage.getItem('emailAluno');
+        const cursoAluno = localStorage.getItem('cursoAluno');
+
+        document.getElementById('nomeAluno').textContent = nomeAluno;
+        document.getElementById('cpfAluno').textContent = cpfAluno;
+        document.getElementById('emailAluno').textContent = emailAluno;
+        document.getElementById('cursoAluno').textContent = cursoAluno;
+    </script>
+</body>
+</html>
