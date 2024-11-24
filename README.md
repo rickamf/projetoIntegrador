@@ -1,5 +1,5 @@
 # Projeto Integrador - Senac
-Projeto Integrador - Desenvolvimento de Sistemas Orientado a Objetos
+Desenvolvimento de Sistemas Orientado a Objetos
 # Linguagens Usadas: 
 HTML, CSS, JAVA
 # Integrantes: 
