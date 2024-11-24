@@ -1,8 +1,8 @@
-# projetoIntegrador
+# Projeto Integrador - Senac
 Projeto Integrador - Desenvolvimento de Sistemas Orientado a Objetos
-# linguagens usadas: 
+# Linguagens Usadas: 
 HTML, CSS, JAVA
-# integrantes: 
+# Integrantes: 
 Henrique Augusto Martins Fernandes
 Eduardo Freitas Santos
 
