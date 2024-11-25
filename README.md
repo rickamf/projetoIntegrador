@@ -1,7 +1,11 @@
 # Projeto Integrador - Senac
 Desenvolvimento de Sistemas Orientado a Objetos
 <h2>Linguagens Usadas:</h2> 
-HTML, CSS, JAVA
+<ul>
+<li>HTML</li>
+<li>CSS</li> 
+<li>JAVA</li>
+</ul>
 <h2>Integrantes: </h2>
 <ul>
 <li> Henrique Augusto Martins Fernandes</li>
